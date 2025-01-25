@@ -1,0 +1,169 @@
+.popular {
+    padding: 140px 3px;
+    h2 {
+        font-size: 32px;
+        line-height: 52px;
+    }
+
+    .blocks {
+        margin: 20px 0 76px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+        p {
+            font-size: 20px;
+            line-height: 27px;
+            width: 70%;
+        }
+
+        .slide {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .slide__btn {
+                width: 40px;
+                height: 40px;
+
+                background-color: #F4F6F6;
+                border-radius: 50%;
+
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 2px;
+                    left: px;
+                    top: px;
+
+                    background: var(--color-shadow);
+                    box-shadow: 2px 0 0 var(--color-shadow), 4px 0 0 var(--color-shadow), 6px 0 0 var(--color-shadow), 8px 0 0 var(--color-shadow), 10px 0 0 var(--color-shadow),  12px 0 0 var(--color-shadow),
+                    12px -2px 0 var(--color-shadow), 12px -4px 0 var(--color-shadow), 12px -6px 0 var(--color-shadow), 12px -8px 0 var(--color-shadow), 12px -10px 0 var(--color-shadow), 12px -12px 0 var(--color-shadow);
+                }
+            }
+            .slide__btn-active {
+                --color-shadow: #666;
+            }
+            .slide__btn:not(.slide__btn-active) {
+                --color-shadow: #D1CECE;
+            }
+            .slide__btn-left::before {
+                transform: translate(20px, 10px) rotate(135deg);
+            }
+            .slide__btn-right::before {
+                transform: translate(17px, 28px) rotate(-45deg);
+            }
+        }
+    }
+// ----------------------------------------------------------------------
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .cards__card {
+        background-color: white;
+        box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            box-shadow: 0 13px 26px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .cards__content {
+        padding: 31px 21px;
+    }
+
+    .cards__name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            font-family: var(--font-main);
+            color: #242424;
+            font-size: 20px;
+            line-height: 27px;
+            font-weight: 500;
+        }
+        .cards__h3 {
+            margin-right: auto;
+        }
+        .cards__icon {
+            display: inline-block;
+            margin-left: 7px;
+        }
+
+        .heart-ellipse, .share-ellipse{
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            background-color: #ECF4FF;
+            position: relative;
+
+            .heart, .share {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        }
+        .heart-ellipse:hover {
+            background-color: #EF5423;
+            .heart path {
+                fill: white;
+            }
+        }
+        .share-ellipse:hover {
+            background-color: var(--color-accent);
+            .share path {
+                fill: white;
+            }
+        }
+
+        .heart-active {
+            background-color: #EF5423;
+            .heart path {
+                fill: white;
+            }
+
+            &:hover {
+                background-color: #ECF4FF;
+                .heart path {
+                    fill: black;
+                }
+            }
+        }
+    }
+    .cards__price {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            color: var(--color-dark);
+            font-size: 24px;
+            line-height: 31px;
+            font-weight: 500;
+        }
+        a {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: var(--color-accent);
+            color: white;
+            font-size: 12px;
+            line-height: 21px;
+            font-weight: 500;
+            &:hover {
+                background-color: var(--color-light);
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    
+
+}
