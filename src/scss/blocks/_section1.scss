@@ -1,0 +1,35 @@
+.help {
+    color: white;
+    .content {
+
+        background: var(--color-dark) url("../img/armchair.jpg") left top no-repeat;
+        font-size: 20px;
+        line-height: 25px;
+        padding: 101px 0px 137px 511px;
+
+        h1 {
+            font-size: 56px;
+            line-height: 68px;                
+        }
+
+        p {
+            margin: 20px 0 36px 0;
+            width: 70%;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 25px;
+            color: var(--color-dark);
+            background-color: white;
+
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                background-color: var(--color-light);
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}

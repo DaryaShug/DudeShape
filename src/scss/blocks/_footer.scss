@@ -1,0 +1,18 @@
+.footer {
+	background-color: var(--color-light);
+	padding: 30px 0;
+	color: white;
+
+	.blocks {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.blocks__block {
+		width: 25%;
+	}
+
+	.copyright {
+		text-align: center;
+	}
+}

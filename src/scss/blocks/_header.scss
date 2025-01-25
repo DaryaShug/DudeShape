@@ -1,0 +1,39 @@
+.header {
+	padding: 43px 0 27px 0;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	h1 {
+		color: var(--color-accent);
+		font-size: 24px;
+		line-height: 29px;
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	.header__form {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+		margin-left: 110px;
+		
+		button {
+			width: 24px;
+			height: 25px;
+		}
+		
+		.search {
+			background: url('../img/loupe.svg') 0 0 no-repeat;
+		}
+
+		.menu {
+			background: url('../img/menu.svg') 0 0 no-repeat;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+/* Base */
+@use "./base/reset";
+@use "./base/fonts";
+@use "./base/vars";
+@use "./base/base";
+@use "./base/utils";
+@use "./base/containers";
+@use "./base/sticky-footer";
+
+/* Blocks */
+
+@use "blocks/header";
+@use "blocks/nav";
+@use "blocks/section1";
+@use "blocks/section2";
+@use "blocks/section3";
+@use "blocks/section4";
+@use "blocks/section5";
+@use "blocks/section6";
+@use "blocks/section7";
+@use "blocks/footer";
+
+html {
+	scroll-behavior: smooth;
+}
