@@ -1,0 +1,40 @@
+@mixin svg-btn_round($diameter, $bg-color, $path-color, $hover_bg-color, $hover_path-color) {
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    background-color: $bg-color;
+    position: relative;
+
+    &>svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &>path {
+            fill: $path-color;
+        }
+    }
+
+    &:hover {
+        background-color: $hover_bg-color;
+        &>svg>path {
+            fill: $hover_path-color;
+        }
+    }
+}
+
+@mixin svg-btn_active($bg-color, $path-color, $hover_bg-color, $hover_path-color) {
+
+    background-color: $bg-color;
+    &>svg>path {
+        fill: $path-color;
+    }
+
+    &:hover {
+        background-color: $hover_bg-color;
+        &>svg>path {
+            fill: $hover_path-color;
+        }
+    }
+}

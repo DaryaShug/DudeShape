@@ -1,3 +1,5 @@
+@use "./mixins/icon-button" as *;
+
 .popular {
     padding: 140px 3px;
     h2 {
@@ -96,46 +98,14 @@
             margin-left: 7px;
         }
 
-        .heart-ellipse, .share-ellipse{
-            width: 27px;
-            height: 27px;
-            border-radius: 50%;
-            background-color: #ECF4FF;
-            position: relative;
-
-            .heart, .share {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-
+        .heart-ellipse {
+            @include svg-btn_round(27px, #ECF4FF, black, #EF5423, white);
         }
-        .heart-ellipse:hover {
-            background-color: #EF5423;
-            .heart path {
-                fill: white;
-            }
+        .share-ellipse {
+            @include svg-btn_round(27px, #ECF4FF, black, var(--color-accent), white);
         }
-        .share-ellipse:hover {
-            background-color: var(--color-accent);
-            .share path {
-                fill: white;
-            }
-        }
-
         .heart-active {
-            background-color: #EF5423;
-            .heart path {
-                fill: white;
-            }
-
-            &:hover {
-                background-color: #ECF4FF;
-                .heart path {
-                    fill: black;
-                }
-            }
+            @include svg-btn_active(#EF5423, white, #ECF4FF, black);
         }
     }
     .cards__price {
