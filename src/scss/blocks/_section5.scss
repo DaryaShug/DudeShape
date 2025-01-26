@@ -1,0 +1,131 @@
+@use "./mixins/icon-button" as *;
+
+.furniture {
+    h2 {
+        color: #242424;
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+    }
+    h3 {
+        font-family: var(--font-main);
+        color: var(--color-dark);
+        font-size: 24px;
+        line-height: 27px;
+        font-weight: 500;
+        
+    }
+    .categories {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        margin-top: 20px;
+        margin-bottom: 79px;
+
+        a {
+            // display: block;
+            padding-bottom: 9px;
+            position: relative;
+
+            &:hover {
+                text-decoration: none;
+                &::after {
+                    box-shadow: 3px 3px 0 -15px var(--color-dark);
+
+                    content: '';
+                    position: absolute;
+                    width: 3px;
+                    height: 3px;
+                    left: 50%;
+                    bottom: 0;
+
+                    background: var(--color-dark);
+                    box-shadow:  2px 0 0 var(--color-dark), 4px 0 0 var(--color-dark), 6px 0 0 var(--color-dark), 8px 0 0 var(--color-dark), 10px 0 0 var(--color-dark), 12px 0 0 var(--color-dark), 14px 0 0 var(--color-dark), 16px 0 0 var(--color-dark), 18px 0 0 var(--color-dark), 20px 0 0 var(--color-dark), 21px 0 0 var(--color-dark), 22px 0 0 var(--color-dark), 24px 0 0 var(--color-dark), 26px 0 0 var(--color-dark),
+                                -2px 0 0 var(--color-dark),-4px 0 0 var(--color-dark),-6px 0 0 var(--color-dark),-8px 0 0 var(--color-dark),-10px 0 0 var(--color-dark),-12px 0 0 var(--color-dark),-14px 0 0 var(--color-dark),-16px 0 0 var(--color-dark),-18px 0 0 var(--color-dark),-20px 0 0 var(--color-dark),-21px 0 0 var(--color-dark),-22px 0 0 var(--color-dark),-24px 0 0 var(--color-dark),-26px 0 0 var(--color-dark);
+                }
+            }
+        }
+    }
+
+
+    .blocks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        .blocks__img {
+            z-index: 99;
+            display: block;
+            position: relative;
+            &::before {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 190px;
+                height: 86px;
+                left: -10px;
+                top: -10px;
+                background-color: var(--color-dark);
+            }
+            &::after {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 190px;
+                height: 86px;
+                right: -10px;
+                bottom: -10px;
+                background-color: var(--color-dark);
+            }
+        }
+
+        .rooms {
+            display: grid;
+            grid-template-rows: 90px 90px 90px; 
+            grid-template-columns: 222px 222px;
+            gap: 28px;
+        }
+
+        .rooms__btn {
+            color: #808080;
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: 500;
+            
+            &>input[type=radio] {
+                display: none;
+            }
+
+            %rbtn-checked {
+                background-color: var(--color-dark);
+                color: white;
+                border-color: var(--color-dark);
+                &>svg>path {
+                    fill: white;
+                }
+            }
+
+            &>label {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                height: 100%;
+                border: 2px solid #D9DCE5;
+
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    @extend %rbtn-checked;
+                }
+            }
+
+            & input[type=radio]:checked + label {
+                @extend %rbtn-checked;
+            }
+        }
+    }
+
+}
