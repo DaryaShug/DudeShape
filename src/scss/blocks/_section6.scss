@@ -1,0 +1,80 @@
+.feedback {
+    padding: 143px 0 50px 0;
+
+
+    .blocks {
+        display: flex;
+        justify-content: center;
+        gap: 67px;
+    }
+    .blocks__img {
+        width: 50%;
+        text-align: end;
+        
+        .blocks__img-wrapper {
+            display: inline-block;
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: -100px;
+                top: 0;
+                background: var(--color-accent);
+                border-radius: 50%;
+                z-index: -1;
+            }
+    }
+    }
+    .blocks__content {
+        width: 50%;
+        padding: 105px 0 0 34px;
+
+        &>h2 {
+            font-size: 32px;
+            line-height: 48px;
+        }
+        &>p {
+            font-size: 20px;
+            line-height: 27px;
+            margin: 20px 0 34px 0;
+        }
+    }
+    
+
+    .author-wrapper {
+        display: inline-block;
+    }
+    .author {
+        display: grid;
+        gap: 7px;
+        grid-template-areas:    "img name"
+                                "img star";
+        
+    }
+
+    .author-img {
+        grid-area: img;
+    }
+
+    .author-name {
+        grid-area: name;
+        align-self: end;
+
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500; 
+    }
+    .author-star {
+        grid-area: star;
+
+        font-size: 14px;
+        line-height: 15px;
+        font-weight: 500; 
+
+        padding-left: 25px;
+        background: url("../img/star.svg") 0 0 no-repeat;
+    }
+}
