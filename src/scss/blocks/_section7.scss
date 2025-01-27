@@ -1,0 +1,37 @@
+.register {
+    color: #222222;
+    padding: 65px 283px 157px 283px;
+    text-align: center;
+    background-color: #F4F6F6;
+    h2 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 20px 0;
+        padding: 0 63px;
+    }
+    form {
+        font-size: 16px;
+        line-height: 22px;
+        background-color: white;
+        margin: 40px 80px;
+        padding: 6px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    input {
+        background: url("../img/mail.svg") 0 center no-repeat;
+        padding-left: 27px;
+        &::placeholder {
+            color: #BABABA;
+        }
+    }
+    button {
+        color: white;
+        background-color: var(--color-light);
+        padding: 16px 33px;
+    }
+}
